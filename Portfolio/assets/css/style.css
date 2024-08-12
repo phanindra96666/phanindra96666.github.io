@@ -17,7 +17,7 @@ html, body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("https://img.freepik.com/free-photo/top-view-workspace-with-notebook-notepad_23-2148430825.jpg?t=st=1723445047~exp=1723448647~hmac=b08dd5a402e4e0ebf53aa04f1cf0af74da18386cf5273e8df80499ce68bac9c2&w=996") no-repeat center center;
+  background: #040404 url("https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_1280.jpg") no-repeat center center;
   background-size: cover;
   top: 0;
   left: 0;
