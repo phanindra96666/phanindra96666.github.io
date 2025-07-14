@@ -8,24 +8,25 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(145deg, #fcefee, #e8f0fe);
+      padding: 40px 0;
+      background:
+        linear-gradient(rgba(252, 239, 238, 0.8), rgba(232, 240, 254, 0.8)),
+        url('https://static.vecteezy.com/system/resources/previews/002/541/681/large_2x/birthday-celebration-with-beautiful-pink-flowers-and-greeting-cards-on-a-pastel-background-free-photo.jpg')
+        no-repeat center/cover;
       font-family: 'Quicksand', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      overflow-y: auto;
     }
 
     .card {
       background: #ffffffbb;
       border-radius: 20px;
       padding: 40px;
-      max-width: 600px;
+      max-width: 700px;
       box-shadow: 0 15px 30px rgba(0,0,0,0.1);
       text-align: center;
       animation: fadeIn 2s ease-in-out;
+      margin: 0 auto; /* center horizontally */
     }
 
     h1 {
@@ -59,6 +60,27 @@
       background: #c2185b;
     }
 
+    .images {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .images img {
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      object-fit: cover;
+    }
+
+    .images img:hover {
+      transform: scale(1.05);
+    }
+
     @keyframes floatText {
       0% { transform: translateY(0); }
       100% { transform: translateY(-10px); }
@@ -72,22 +94,39 @@
 </head>
 <body>
   <div class="card">
-    <h1>Happy Birthday 🎉
-      Swarupa
-    </h1>
+    <h1>Happy Birthday 🎉 <br> Swarupa</h1>
     <p>
       Wishing you a day filled with love, warmth, and all the joy your heart can hold.<br><br>
       You are truly a wonderful person and deserve every beautiful thing in life.<br>
       May this year be even more amazing than the last. 🌸
     </p>
+
+    <div class="images">
+      <img src="7b4d6e7ae9dc284840d9f393d07c7341.jpg" alt="Swarupa Photo 1">
+    </div>
+
     <button onclick="playMusic()">Play Song 🎶</button>
   </div>
 
   <audio id="song" src="04 -  Yamuna Thatilo [www.SenSongsMp3.co].mp3"></audio>
+
   <script>
+    const song = document.getElementById("song");
+    const button = document.querySelector("button");
+
     function playMusic() {
-      document.getElementById("song").play();
+      if (song.paused) {
+        song.play();
+        button.textContent = "Pause Song ⏸️";
+      } else {
+        song.pause();
+        button.textContent = "Play Song 🎶";
+      }
     }
+
+    song.addEventListener("ended", () => {
+      button.textContent = "Play Song 🎶";
+    });
   </script>
 </body>
 </html>
