@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(145deg, #fcefee, #e8f0fe);
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #ffffffbb;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      color: #e91e63;
+      margin-bottom: 10px;
+      animation: floatText 3s ease infinite alternate;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 24px;
+      background: #e91e63;
+      color: white;
+      font-size: 1em;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #c2185b;
+    }
+
+    @keyframes floatText {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy Birthday 🎉
+      Swarupa
+    </h1>
+    <p>
+      Wishing you a day filled with love, warmth, and all the joy your heart can hold.<br><br>
+      You are truly a wonderful person and deserve every beautiful thing in life.<br>
+      May this year be even more amazing than the last. 🌸
+    </p>
+    <button onclick="playMusic()">Play Song 🎶</button>
+  </div>
+
+  <audio id="song" src="04 -  Yamuna Thatilo [www.SenSongsMp3.co].mp3"></audio>
+  <script>
+    function playMusic() {
+      document.getElementById("song").play();
+    }
+  </script>
+</body>
+</html>
