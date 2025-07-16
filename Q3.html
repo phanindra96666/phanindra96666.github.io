@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Question 3</title>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body class="white-screen">
+  <div class="quiz-box">
+    <h2>Question 3</h2>
+    <p>What color does Swarupa love the most?</p>
+    <input type="text" id="answer" placeholder="Your answer..." />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const ans = document.getElementById("answer").value.trim().toLowerCase();
+      if (ans === "pink") {
+        window.location.href = "try.html";
+      } else {
+        document.getElementById("feedback").textContent = "Almost there! Try again 🎯";
+      }
+    }
+  </script>
+</body>
+</html>

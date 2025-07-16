@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Question 2</title>
+  <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body class="white-screen">
+  <div class="quiz-box">
+    <h2>Question 2</h2>
+    <p>Which month is Swarupa’s birthday in?</p>
+    <input type="text" id="answer" placeholder="Your answer..." />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const ans = document.getElementById("answer").value.trim().toLowerCase();
+      if (ans === "july") {
+        window.location.href = "Q3.html";
+      } else {
+        document.getElementById("feedback").textContent = "Nope! Try again 🌟";
+      }
+    }
+  </script>
+</body>
+</html>
