@@ -10,7 +10,7 @@
 <body class="white-screen">
   <div class="quiz-box">
     <h2>Question 3</h2>
-    <p>What color does Swaroopa love the most?</p>
+    <p>What is Swaroopa Favourite Cartoon ?</p>
     <input type="text" id="answer" placeholder="Your answer..." />
     <button onclick="checkAnswer()">Submit</button>
     <p id="feedback"></p>
@@ -19,7 +19,7 @@
   <script>
     function checkAnswer() {
       const ans = document.getElementById("answer").value.trim().toLowerCase();
-      if (ans === "pink") {
+      if (ans === "shinchan") {
         window.location.href = "try.html";
       } else {
         document.getElementById("feedback").textContent = "Almost there! Try again 🎯";
