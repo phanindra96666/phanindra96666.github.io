@@ -10,7 +10,7 @@
 <body class="white-screen">
   <div class="quiz-box">
     <h2>Question 1</h2>
-    <p>What is Swaroopa’s favorite flower?</p>
+    <p>What is Swaroopa’s favorite Food?</p>
     <input type="text" id="answer" placeholder="Your answer..." />
     <button onclick="checkAnswer()">Submit</button>
     <p id="feedback"></p>
@@ -19,7 +19,7 @@
   <script>
     function checkAnswer() {
       const ans = document.getElementById("answer").value.trim().toLowerCase();
-      if (ans === "rose") {
+      if (ans === "manchuria") {
         window.location.href = "Q2.html";
       } else {
         document.getElementById("feedback").textContent = "Oops! Try again 💡";
