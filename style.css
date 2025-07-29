@@ -13,11 +13,11 @@ body {
     justify-content: flex-start;
     min-height: 100vh;
     background-color: #f0f2f5;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
 .img {
-    width: 50%;
+    width: 60%;
     max-width: 250px;
 }
 
@@ -25,29 +25,31 @@ body {
     background-color: white;
     border-radius: 8px;
     width: 100%;
-    max-width: 397.6px;
-    height: 313px;
+    max-width: 400px;
     padding: 2rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .cen {
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
     margin-top: -10px;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.username,
+.password {
+    width: 100%;
 }
 
 .input {
     border-radius: 6px;
-    font-size: 17px;
-    padding: 16px 18px;
-    width: 363.6px;
-    height: 51.6;
-    margin-top: 10px;
-    margin-left: -10px;
-    font-size: 1rem;border: 0.1px solid #ccc;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border: 0.1px solid #ccc;
+    margin-bottom: 1rem;
 }
 
 input:focus, .form-control:focus {
@@ -55,25 +57,23 @@ input:focus, .form-control:focus {
     box-shadow: none !important;
     border-color: #0866ff !important;
 }
+
 .sub {
     border-radius: 8px;
     border: none;
     background-color: #0866ff;
-    width: 364px;
-    height: 48px;;
-    padding: 1rem;
-    font-size: 1.2rem;
+    width: 100%;
+    height: 48px;
+    font-size: 1.1rem;
     color: white;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 0.5rem;
-    margin-left: -12px;
-
+    margin-top: -5px;
 }
 
 .last {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 1.1rem;
 }
 
 .last a {
@@ -82,6 +82,7 @@ input:focus, .form-control:focus {
     font-size: 0.95rem;
 }
 
+/* Media Query for small screens */
 @media (max-width: 600px) {
     .img {
         width: 80%;
@@ -91,12 +92,13 @@ input:focus, .form-control:focus {
         padding: 1.5rem 1rem;
     }
 
-    .input, .sub {
+    .input,
+    .sub {
         font-size: 0.95rem;
         padding: 0.9rem;
     }
 
     .cen {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 }
